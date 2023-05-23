@@ -10,6 +10,5 @@ Pour faire tourner le programme correctement:
 -lorsque la partie est finie et qu'on demande à l'utilisateur de choisir s'il veut recommencer la partie avec les mêmes personnages on attend qu'il écrive oui si c'est le cas et n'importe quoi d'autre dans le cas contraire
 
 Bug et problèmes que nous n'avons pas su régler:
--afficher les scores 
 -noter les scores 
 
