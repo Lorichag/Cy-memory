@@ -1,5 +1,5 @@
 #include "fonctions.h"
-                              
+/*                             
   ____    _                                                      
  |  _ \  (_)                                                     
  | |_) |  _    ___   _ __   __   __   ___   _ __    _   _    ___ 
@@ -7,7 +7,7 @@
  | |_) | | | |  __/ | | | |  \ V /  |  __/ | | | | | |_| | |  __/
  |____/  |_|  \___| |_| |_|   \_/    \___| |_| |_|  \__,_|  \___|
                                           
-	
+*/	
 
 int main(){
   int nbplayer,character1,character2,character3,character4,check;//variables qui compte le nombre de joueur et le perso choisi par chaque joueur
