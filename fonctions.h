@@ -1,4 +1,3 @@
-
 #ifndef FONCTIONS
 #define FONCTIONS
 
@@ -65,3 +64,4 @@ void vide_buffer();
 
 
 #endif
+
