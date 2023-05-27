@@ -364,7 +364,6 @@ Hero trap(Hero p, char tab[ROW][COL]) {
 Hero turn(Hero p, char tab[ROW][COL], char tabmob[25], char tab2[7][7], char tabstart[ROW][COL]) { // Gère le tour d'un joueur
   do {
     display(tab, p, tab2); // On affiche le plateau au début du tour
-    display2(tab2);
     sleep(1);
     p = choiceW(p);        // Choix de l'arme
     p = move(p, tab);      // Choix de la direction
