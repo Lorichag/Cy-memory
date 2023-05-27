@@ -1,5 +1,5 @@
 #include "fonctions.h"
-/*                               
+                              
   ____    _                                                      
  |  _ \  (_)                                                     
  | |_) |  _    ___   _ __   __   __   ___   _ __    _   _    ___ 
@@ -7,16 +7,17 @@
  | |_) | | | |  __/ | | | |  \ V /  |  __/ | | | | | |_| | |  __/
  |____/  |_|  \___| |_| |_|   \_/    \___| |_| |_|  \__,_|  \___|
                                           
-*/		
+	
 
 int main(){
   int nbplayer,character1,character2,character3,character4,check;//variables qui compte le nombre de joueur et le perso choisi par chaque joueur
+  couleur(31)
   printf("__________________________________________________ \n");
+  couleur(5)
   printf("           Bienvenue sur le Memo-RPG        \n");
+  couleur(0)
   printf("\n");
-//  printf("Les règles sont simples trouver le coffre et votre arme magique sur le plateau en faisant attention de se souvenir où se trouve les monstres et autre évenement.\n");
-
-                                   
+//  printf("Les règles sont simples trouver le coffre et votre arme magique sur le plateau en faisant attention de se souvenir où se trouve les monstres et autre évenement.\n");                             
   printf("           Saisir le nombre de joueur: \n");
   printf("           2 joueur  3 joueur 4 joueur\n");
   printf("\n");
@@ -24,13 +25,32 @@ int main(){
   printf("              Le but est simple\n");
   printf("    Trouver votre arme magique, votre coffre \n");
   printf("Et retenez les cases sur lesquelles vous marchez\n");
+  couleur(31)
   printf("___________________________________________________\n");
+  couleur(0)
+  printf("Si vous voulez afficher les scores saisissez 1 \n");
   check=scanf("%d",&nbplayer);
   vide_buffer();
   printf("\n");
+  if(nbplayer==1){
+    char c[50];
+    FILE *f=fopen("scores.txt","r");
+    if(f==NULL){
+      printf("impossible d'ouvrir le fichier");
+    }
+    else{
+      while(fgets(c,sizeof c,f)!=NULL){
+        printf("%s",c);
+      }
+      fclose(f);
+      printf("\n");
+    }
+  }
   while(nbplayer<2 || nbplayer>4 || check!=1){//Si le nombre saisi n'est pas 2,3 ou 4
-    printf("Erreur de saisie \n");
-    printf("Veuillez ressaisir le nombre de joueur(entre 2 et 4): \n");
+    if(nbplayer!=1){
+      printf("Erreur de saisie \n");
+    }
+    printf("Veuillez saisir le nombre de joueur(entre 2 et 4): \n");
     check=scanf("%d",&nbplayer);
     vide_buffer();
     printf("\n");
@@ -245,6 +265,9 @@ int main(){
   char tab[ROW][COL];
   char tab2[7][7];
   char newgame[3];
+  printf("Les différents éléments du labyrinthe sont:\n Z = Zombie \n B = Basilic \n H = Harpie \n T = Troll \n o = Totem \n P  = Portail \n Arme:\n d = Dague \n e = épée \n b = Baton \n g = Grimoire");
+  printf("\n");
+  sleep(3);
   do{
     char tabmob[25] ={'Z','Z','Z','Z','H','H','H','H','B','B','B','B','T','T','T','T','C','C','o','o','P','b','d','e','g'};
     game(player1,player2,player3,player4,tab,tabmob,tab2);
@@ -262,37 +285,4 @@ int main(){
   main();
   return 0;
 }
-
-   /* couleur(33)
-	printf("🛡\n"); //Guerrier
-	printf("🗝\n"); // voleur
-	printf("⚚\n"); //magicien
-	printf("➳\n");  //Ranger
-	
-	
-	printf("▥\n"); //case 
-	printf("▧\n"); //case
-	printf("□\n");  //case vide
-	
-
-	printf("🕮\gedin"); //grimoire
-	printf("⚔ \n");  //épée
-	printf("🗡\n");  //Dague
-	printf("⚕\n");  //Baton
-	
-	printf("☣\n");  //zombie	
-	printf("〠\n");  //Troll
-	printf("☬\n");  //Harpie
-	printf("ఋ\n");  //Basilic
-	
-	printf("۝\n");  //Portail
-	printf("۩\n");  //Totem
-
-	
-	printf("▣ \n"); //coffre
-	
-	couleur(7)  //échanger la couleur du fond et du texte
-
-
-*/
 
