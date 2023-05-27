@@ -9,8 +9,7 @@ void display2(char tab[ROW][COL]) { // Affiche le terrain avec les évenement
   int i, j;
   for (i = 0; i < ROW; i++) { // Parcours du plateau
     for (j = 0; j < COL; j++) {
-      if (tab[i][j] == 'Z' || tab[i][j] == 'H' || tab[i][j] == 'T' ||
-          tab[i][j] == 'B') {
+      if (tab[i][j] == 'Z' || tab[i][j] == 'H' || tab[i][j] == 'T' || tab[i][j] == 'B') {
         couleur(31) // Affiche les monstres
             printf(" %c ", tab[i][j]);
         couleur(0)
@@ -33,11 +32,9 @@ void display2(char tab[ROW][COL]) { // Affiche le terrain avec les évenement
   }
 }
 
-void display(char tab[ROW][COL], Hero p,
-             char tab2[ROW][COL]) { // Affiche le plateau de jeu
+void display(char tab[ROW][COL], Hero p,char tab2[ROW][COL]) { // Affiche le plateau de jeu
   int i, j;
-  int see = 0; // variable qui permet de savoir si la case a déja été révélé
-               // dans le tour
+  int see = 0; // variable qui permet de savoir si la case a déja été révélé dans le tour
   for (i = 0; i < ROW; i++) {
     for (j = 0; j < COL; j++) {
       if (i == p.x && j == p.y) { // si la case qu'on veut afficher est celle où se trouve le joueur
