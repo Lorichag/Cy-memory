@@ -16,8 +16,7 @@ int main(){
   couleur(5)
   printf("           Bienvenue sur le Memo-RPG        \n");
   couleur(0)
-  printf("\n");
-//  printf("Les règles sont simples trouver le coffre et votre arme magique sur le plateau en faisant attention de se souvenir où se trouve les monstres et autre évenement.\n");                             
+  printf("\n");                             
   printf("           Saisir le nombre de joueur: \n");
   printf("           2 joueur  3 joueur 4 joueur\n");
   printf("\n");
